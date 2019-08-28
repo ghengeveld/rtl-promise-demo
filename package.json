@@ -6,7 +6,15 @@
     "react-dom": "16.9.0",
     "react-scripts": "3.1.1"
   },
+  "devDependencies": {
+    "relative-deps": "^0.1.2"
+  },
+  "relativeDependencies": {
+    "@testing-library/react": "../react-testing-library"
+  },
   "scripts": {
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "pretest": "relative-deps",
+    "postinstall": "relative-deps"
   }
 }
